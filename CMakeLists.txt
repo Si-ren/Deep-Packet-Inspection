@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.02)
+file(GLOB srcs ./*.c)
+include_directories(./)
+add_executable(dpi ${srcs} samples/main.c)
+add_executable(test_list dpi_list.c samples/test_list.c)
+target_link_libraries(dpi pcap)
